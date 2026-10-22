@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fnol",
+  "title": "First Notice of Loss — motor accident",
+  "description": "Initial claim report for a car accident, captured from a phone call.",
+  "type": "object",
+  "additionalProperties": false,
+  "x-display-name-field": "policyholder_name",
+  "x-pii-allow": [],
+  "required": [
+    "policy_number",
+    "policyholder_name",
+    "incident_datetime",
+    "incident_location",
+    "vehicle_plate",
+    "damage_description",
+    "injuries_reported",
+    "third_party_involved",
+    "police_report_filed",
+    "callback_number"
+  ],
+  "properties": {
+    "policy_number": {
+      "type": "string",
+      "description": "Insurance policy number as stated by the caller (e.g. FNX-204518). Verify with lookup_policy.",
+      "pattern": "^[A-Z]{3}-[0-9]{6}$",
+      "x-normalize": ["strip", "upper"],
+      "x-label": {"en": "Policy number", "fr": "Numéro de contrat", "ar": "رقم الوثيقة"},
+      "x-question": {
+        "en": "Could you give me your policy number? It is on your insurance certificate and starts with three letters.",
+        "fr": "Pourriez-vous me donner votre numéro de contrat ? Il figure sur votre attestation d'assurance et commence par trois lettres.",
+        "ar": "هل يمكنك أن تعطيني رقم وثيقة التأمين؟ ستجده في شهادة التأمين ويبدأ بثلاثة أحرف."
+      }
+    },
+    "policyholder_name": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Full name of the policyholder.",
+      "x-label": {"en": "Policyholder name", "fr": "Nom de l'assuré", "ar": "اسم المؤمَّن له"},
+      "x-question": {
+        "en": "Can you confirm the full name of the policyholder?",
+        "fr": "Pouvez-vous me confirmer le nom complet de l'assuré ?",
+        "ar": "هل يمكنك تأكيد الاسم الكامل للمؤمَّن له؟"
+      }
+    },
+    "incident_datetime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the accident happened, ISO 8601 (YYYY-MM-DDTHH:MM:SS, local time). Resolve relative expressions such as 'yesterday at 5pm' against the call date.",
+      "x-validators": ["not_in_future"],
+      "x-label": {"en": "Date & time of incident", "fr": "Date et heure du sinistre", "ar": "تاريخ ووقت الحادث"},
+      "x-question": {
+        "en": "On what date and at roughly what time did the accident happen?",
+        "fr": "À quelle date et vers quelle heure l'accident a-t-il eu lieu ?",
+        "ar": "في أي تاريخ وحوالي أي ساعة وقع الحادث؟"
+      }
+    },
+    "incident_location": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Where the accident happened (street, city, landmark).",
+      "x-label": {"en": "Location", "fr": "Lieu", "ar": "المكان"},
+      "x-question": {
+        "en": "Where exactly did the accident take place — street and city?",
+        "fr": "Où exactement l'accident s'est-il produit — rue et ville ?",
+        "ar": "أين وقع الحادث بالضبط — الشارع والمدينة؟"
+      }
+    },
+    "vehicle_plate": {
+      "type": "string",
+      "format": "license-plate",
+      "description": "Registration plate of the insured vehicle. French SIV format AB-123-CD or Moroccan format 12345-A-6 (digits-letter-region).",
+      "x-label": {"en": "Vehicle plate", "fr": "Immatriculation", "ar": "رقم التسجيل"},
+      "x-question": {
+        "en": "What is the registration plate of your vehicle?",
+        "fr": "Quelle est l'immatriculation de votre véhicule ?",
+        "ar": "ما هو رقم تسجيل سيارتك؟"
+      }
+    },
+    "damage_description": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Short description of the damage to the insured vehicle.",
+      "x-label": {"en": "Damage", "fr": "Dommages", "ar": "الأضرار"},
+      "x-question": {
+        "en": "Can you describe the damage to your vehicle?",
+        "fr": "Pouvez-vous décrire les dommages sur votre véhicule ?",
+        "ar": "هل يمكنك وصف الأضرار التي لحقت بسيارتك؟"
+      }
+    },
+    "injuries_reported": {
+      "type": "boolean",
+      "description": "Whether anybody was injured.",
+      "x-label": {"en": "Injuries", "fr": "Blessés", "ar": "إصابات"},
+      "x-question": {
+        "en": "Was anyone injured in the accident, even slightly?",
+        "fr": "Y a-t-il eu des blessés, même légers ?",
+        "ar": "هل أصيب أي شخص في الحادث، ولو بشكل طفيف؟"
+      }
+    },
+    "injury_details": {
+      "type": "string",
+      "description": "Who was injured and how. Required when injuries_reported is true.",
+      "x-label": {"en": "Injury details", "fr": "Détail des blessures", "ar": "تفاصيل الإصابات"},
+      "x-question": {
+        "en": "Who was injured, and what kind of injuries were they?",
+        "fr": "Qui a été blessé et de quel type de blessures s'agit-il ?",
+        "ar": "من أصيب، وما نوع الإصابات؟"
+      }
+    },
+    "third_party_involved": {
+      "type": "boolean",
+      "description": "Whether another vehicle or party was involved.",
+      "x-label": {"en": "Third party involved", "fr": "Tiers impliqué", "ar": "طرف ثالث متورط"},
+      "x-question": {
+        "en": "Was another vehicle or person involved in the accident?",
+        "fr": "Un autre véhicule ou une autre personne était-il impliqué ?",
+        "ar": "هل كانت هناك سيارة أخرى أو شخص آخر متورط في الحادث؟"
+      }
+    },
+    "third_party_name": {
+      "type": "string",
+      "description": "Name of the other driver / party.",
+      "x-label": {"en": "Third party name", "fr": "Nom du tiers", "ar": "اسم الطرف الثالث"},
+      "x-question": {
+        "en": "Do you have the name of the other driver?",
+        "fr": "Avez-vous le nom de l'autre conducteur ?",
+        "ar": "هل لديك اسم السائق الآخر؟"
+      }
+    },
+    "third_party_plate": {
+      "type": "string",
+      "format": "license-plate",
+      "description": "Registration plate of the other vehicle (FR or MA format).",
+      "x-label": {"en": "Third party plate", "fr": "Immatriculation du tiers", "ar": "رقم تسجيل الطرف الثالث"},
+      "x-question": {
+        "en": "Did you note the registration plate of the other vehicle?",
+        "fr": "Avez-vous relevé l'immatriculation de l'autre véhicule ?",
+        "ar": "هل سجلت رقم لوحة السيارة الأخرى؟"
+      }
+    },
+    "third_party_insurer": {
+      "type": "string",
+      "description": "Insurance company of the other party.",
+      "x-label": {"en": "Third party insurer", "fr": "Assureur du tiers", "ar": "شركة تأمين الطرف الثالث"},
+      "x-question": {
+        "en": "Do you know which company insures the other vehicle?",
+        "fr": "Savez-vous quelle compagnie assure l'autre véhicule ?",
+        "ar": "هل تعرف شركة التأمين الخاصة بالسيارة الأخرى؟"
+      }
+    },
+    "police_report_filed": {
+      "type": "boolean",
+      "description": "Whether the police attended or a police report was filed.",
+      "x-label": {"en": "Police report filed", "fr": "Rapport de police", "ar": "محضر الشرطة"},
+      "x-question": {
+        "en": "Did the police come to the scene, or has a police report been filed?",
+        "fr": "La police est-elle intervenue ou un procès-verbal a-t-il été établi ?",
+        "ar": "هل حضرت الشرطة إلى مكان الحادث أو تم تحرير محضر؟"
+      }
+    },
+    "police_report_number": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Police report reference, if one was given. Required when police_report_filed is true.",
+      "x-label": {"en": "Police report no.", "fr": "N° de procès-verbal", "ar": "رقم المحضر"},
+      "x-question": {
+        "en": "Do you have the police report reference number?",
+        "fr": "Avez-vous le numéro du procès-verbal ?",
+        "ar": "هل لديك الرقم المرجعي لمحضر الشرطة؟"
+      }
+    },
+    "witnesses": {
+      "type": "array",
+      "description": "People who saw the accident. Empty list if the caller said there were none.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "phone": {"type": ["string", "null"], "format": "phone"}
+        }
+      },
+      "x-label": {"en": "Witnesses", "fr": "Témoins", "ar": "الشهود"},
+      "x-question": {
+        "en": "Were there any witnesses? If so, do you have their names and phone numbers?",
+        "fr": "Y avait-il des témoins ? Si oui, avez-vous leurs noms et numéros de téléphone ?",
+        "ar": "هل كان هناك شهود؟ إذا كان الأمر كذلك، هل لديك أسماؤهم وأرقام هواتفهم؟"
+      }
+    },
+    "callback_number": {
+      "type": "string",
+      "format": "phone",
+      "description": "Phone number to call the caller back on. French (06 12 34 56 78 / +33…), Moroccan (06 61 23 45 67 / +212…) or international E.164.",
+      "x-label": {"en": "Callback number", "fr": "Numéro de rappel", "ar": "رقم الاتصال"},
+      "x-question": {
+        "en": "What is the best phone number to reach you on?",
+        "fr": "À quel numéro pouvons-nous vous rappeler ?",
+        "ar": "ما هو أفضل رقم هاتف للتواصل معك؟"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"injuries_reported": {"const": true}}, "required": ["injuries_reported"]},
+      "then": {"required": ["injury_details"]}
+    },
+    {
+      "if": {"properties": {"police_report_filed": {"const": true}}, "required": ["police_report_filed"]},
+      "then": {"required": ["police_report_number"]}
+    },
+    {
+      "if": {"properties": {"third_party_involved": {"const": true}}, "required": ["third_party_involved"]},
+      "then": {"required": ["third_party_name", "third_party_plate"]}
+    }
+  ]
+}

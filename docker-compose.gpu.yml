@@ -1,0 +1,26 @@
+# Optional NVIDIA GPU override:
+#   docker compose -f docker-compose.yml -f docker-compose.gpu.yml up --build
+# Requires the NVIDIA Container Toolkit. Builds CUDA torch wheels; faster-whisper
+# and the embedding model pick the GPU up automatically.
+x-gpu: &gpu
+  build:
+    context: .
+    dockerfile: backend/Dockerfile
+    args:
+      TORCH_INDEX_URL: https://download.pytorch.org/whl/cu124
+  image: fnol-backend:cuda
+  deploy:
+    resources:
+      reservations:
+        devices:
+          - driver: nvidia
+            count: all
+            capabilities: [gpu]
+
+services:
+  migrate: *gpu
+  api: *gpu
+  worker:
+    <<: *gpu
+    environment:
+      WHISPER_MODEL: ${WHISPER_MODEL:-large-v3}

@@ -1,0 +1,89 @@
+name: fnol
+
+x-backend: &backend
+  build:
+    context: .
+    dockerfile: backend/Dockerfile
+  image: fnol-backend:latest
+  environment:
+    DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-fnol}:${POSTGRES_PASSWORD:-fnol}@db:5432/${POSTGRES_DB:-fnol}
+    ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-4-6}
+    HF_TOKEN: ${HF_TOKEN:-}
+    WHISPER_MODEL: ${WHISPER_MODEL:-small}
+    WHISPER_DEVICE: ${WHISPER_DEVICE:-auto}
+    WHISPER_LANGUAGE: ${WHISPER_LANGUAGE:-}
+    EMBEDDING_BACKEND: ${EMBEDDING_BACKEND:-sentence-transformers}
+    EMBEDDING_MODEL: ${EMBEDDING_MODEL:-BAAI/bge-m3}
+    AUTO_EXTRACT: ${AUTO_EXTRACT:-true}
+    DEFAULT_SCHEMA: ${DEFAULT_SCHEMA:-fnol}
+    CALL_TIMEZONE: ${CALL_TIMEZONE:-Europe/Paris}
+    REDACTION_ENABLED: ${REDACTION_ENABLED:-true}
+    AGENT_MAX_TOOL_CALLS: ${AGENT_MAX_TOOL_CALLS:-40}
+    AGENT_MAX_ITERATIONS: ${AGENT_MAX_ITERATIONS:-25}
+    LOG_LEVEL: ${LOG_LEVEL:-INFO}
+  volumes:
+    - audio:/data/audio
+    - models:/models
+    - ./schemas:/app/schemas:ro   # drop a new schema in ./schemas, no rebuild needed
+  restart: unless-stopped
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-fnol}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-fnol}
+      POSTGRES_DB: ${POSTGRES_DB:-fnol}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+
+  # One-shot: applies Alembic migrations, then exits. api/worker start after it succeeds.
+  migrate:
+    <<: *backend
+    command: ["alembic", "upgrade", "head"]
+    restart: "no"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  api:
+    <<: *backend
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "${API_PORT:-8000}:8000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=4)"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  worker:
+    <<: *backend
+    command: ["python", "-m", "app.worker"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  web:
+    build: ./frontend
+    image: fnol-web:latest
+    ports:
+      - "${WEB_PORT:-3000}:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  audio:
+  models:

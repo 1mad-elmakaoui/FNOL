@@ -1,0 +1,159 @@
+{
+  "id": "french_call",
+  "description": "Appel entièrement en français (France).",
+  "language": "fr",
+  "recorded_at": "2026-09-23T10:00:00+02:00",
+  "duration_s": 78.1,
+  "segments": [
+    {
+      "speaker": "agent",
+      "start_ms": 800,
+      "end_ms": 4040,
+      "text": "Horizon Assurance, service sinistres, bonjour, Julien à votre écoute."
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 4490,
+      "end_ms": 8090,
+      "text": "Bonjour, je vous appelle pour déclarer un accrochage, c'était hier."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 8540,
+      "end_ms": 11780,
+      "text": "Très bien. Vous avez votre numéro de contrat ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 12230,
+      "end_ms": 13310,
+      "text": "Oui, c'est FNX-640075."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 13760,
+      "end_ms": 15920,
+      "text": "Merci. C'est à quel nom ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 16370,
+      "end_ms": 17090,
+      "text": "Claire Dubois."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 17540,
+      "end_ms": 21140,
+      "text": "Merci madame Dubois. Quand est-ce que ça s'est passé ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 21590,
+      "end_ms": 23390,
+      "text": "Hier, vers dix-huit heures quinze."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 23840,
+      "end_ms": 24920,
+      "text": "Et où ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 25370,
+      "end_ms": 29330,
+      "text": "Sur le parking du centre commercial de la Part-Dieu, à Lyon."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 29780,
+      "end_ms": 32300,
+      "text": "Quelle est l'immatriculation de votre véhicule ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 32750,
+      "end_ms": 34550,
+      "text": "GH-512-KL, c'est une Citroën C3."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 35000,
+      "end_ms": 36800,
+      "text": "Quels sont les dégâts ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 37250,
+      "end_ms": 41570,
+      "text": "La portière arrière droite est enfoncée et le rétroviseur droit est cassé."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 42020,
+      "end_ms": 44180,
+      "text": "Y a-t-il eu des blessés ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 44630,
+      "end_ms": 46430,
+      "text": "Non, personne n'a été blessé."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 46880,
+      "end_ms": 49040,
+      "text": "Un autre véhicule était impliqué ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 49490,
+      "end_ms": 56690,
+      "text": "Oui, un monsieur qui sortait en marche arrière, monsieur Bernard Petit. Sa plaque c'est CX-208-VN, il est assuré chez Groupama."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 57140,
+      "end_ms": 58940,
+      "text": "La police est-elle intervenue ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 59390,
+      "end_ms": 62630,
+      "text": "Non, on a juste rempli un constat amiable ensemble."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 63080,
+      "end_ms": 65240,
+      "text": "Il y avait des témoins ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 65690,
+      "end_ms": 66770,
+      "text": "Non, aucun témoin."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 67220,
+      "end_ms": 69740,
+      "text": "À quel numéro puis-je vous rappeler ?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 70190,
+      "end_ms": 72350,
+      "text": "Au 06 23 45 67 89."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 72800,
+      "end_ms": 77120,
+      "text": "Parfait madame Dubois, un expert vous contactera sous quarante-huit heures. Bonne journée."
+    }
+  ]
+}

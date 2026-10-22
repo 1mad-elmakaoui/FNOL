@@ -1,0 +1,5 @@
+# Local ML stack: ASR, diarization, embeddings. torch/torchaudio are installed
+# first from the CPU wheel index in the Dockerfile (override TORCH_INDEX_URL for CUDA).
+faster-whisper>=1.1,<2
+sentence-transformers>=3.3,<4
+pyannote.audio==3.3.2

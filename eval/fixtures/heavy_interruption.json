@@ -1,0 +1,171 @@
+{
+  "id": "heavy_interruption",
+  "description": "Stressed caller, frequent interruptions and overlapping speech; facts scattered across turns.",
+  "language": "en",
+  "recorded_at": "2026-09-18T09:05:00+02:00",
+  "duration_s": 117.5,
+  "segments": [
+    {
+      "speaker": "agent",
+      "start_ms": 800,
+      "end_ms": 4040,
+      "text": "Horizon Assurance claims, this is Emma, how can I—"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 3440,
+      "end_ms": 9920,
+      "text": "Yes hello, sorry, I've just had an accident, like, just now, well this morning, I'm still a bit—"
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 9620,
+      "end_ms": 13220,
+      "text": "Okay, take a breath, sir, are you safe right now?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 13670,
+      "end_ms": 20150,
+      "text": "Yeah, yeah, I'm on the pavement. The van just, it came out of nowhere, it hit my door."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 20600,
+      "end_ms": 23120,
+      "text": "Alright. Can I start with your name?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 23570,
+      "end_ms": 26810,
+      "text": "Thomas. Thomas Keller. K E L L E R."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 27110,
+      "end_ms": 30710,
+      "text": "Thank you Mr Keller, and do you have your policy—"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 30010,
+      "end_ms": 36130,
+      "text": "The policy, hang on, it's on the card, F N X, five five one, nine three zero."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 36330,
+      "end_ms": 38490,
+      "text": "FNX-551930. Great. When exactly did this—"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 37990,
+      "end_ms": 42670,
+      "text": "Like twenty minutes... no, more, it was around quarter past eight this morning."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 43120,
+      "end_ms": 46000,
+      "text": "So about 8:15 today. And where are you?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 46450,
+      "end_ms": 51130,
+      "text": "Rue de Rivoli, right in front of the Louvre-Rivoli metro exit, in Paris."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 51580,
+      "end_ms": 53020,
+      "text": "And your car's registration?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 53470,
+      "end_ms": 57070,
+      "text": "It's the Clio, F K, nine zero two, L M."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 57520,
+      "end_ms": 58600,
+      "text": "FK-902-LM. What's damaged?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 59050,
+      "end_ms": 65890,
+      "text": "The driver's door is completely caved in and the side mirror got torn off, it's lying on the road—"
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 65490,
+      "end_ms": 68010,
+      "text": "Are you hurt at all? Is anybody—"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 67710,
+      "end_ms": 75630,
+      "text": "My wrist, my wrist hurts, I think it's sprained, I put my hand out. The other driver is fine, he got out."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 76080,
+      "end_ms": 80760,
+      "text": "Okay, please get that checked. The other driver, do you have his details?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 81210,
+      "end_ms": 89130,
+      "text": "Yeah he's a delivery guy, Karim Haddad, the van is E Z three three one Q B, he says it's with AXA."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 89580,
+      "end_ms": 91740,
+      "text": "EZ-331-QB, AXA. Did the police come?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 92190,
+      "end_ms": 95790,
+      "text": "No, no police, we're filling in the constat together now."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 96240,
+      "end_ms": 98400,
+      "text": "Okay. Did anyone see what happened?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 98850,
+      "end_ms": 104250,
+      "text": "A cyclist stopped, her name's Léa Rousseau, but I didn't get her number, she's gone—"
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 104050,
+      "end_ms": 107650,
+      "text": "No problem. Last thing, a number to call you back?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 108100,
+      "end_ms": 110260,
+      "text": "Zero seven, eighty-one, twenty-two, ninety, thirteen."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 110710,
+      "end_ms": 116470,
+      "text": "07 81 22 90 13. Take care Mr Keller, we'll call you back within the hour."
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "id": "clean_call",
+  "description": "Clean, well-structured English call; every field stated once.",
+  "language": "en",
+  "recorded_at": "2026-09-14T09:12:00+02:00",
+  "duration_s": 109.9,
+  "segments": [
+    {
+      "speaker": "agent",
+      "start_ms": 800,
+      "end_ms": 6560,
+      "text": "Good morning, Horizon Assurance claims line, my name is Paul. How can I help you today?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 7010,
+      "end_ms": 13490,
+      "text": "Hi Paul, I'd like to report a car accident. Somebody drove into the back of my car yesterday."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 13940,
+      "end_ms": 19700,
+      "text": "I'm sorry to hear that. Let's open a claim. Can I have your policy number please?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 20150,
+      "end_ms": 25190,
+      "text": "Yes, it's F N X dash two zero four five one eight. So FNX-204518."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 25640,
+      "end_ms": 28520,
+      "text": "Thank you. And the name of the policyholder?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 28970,
+      "end_ms": 30410,
+      "text": "Daniel Morgan. That's me."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 30860,
+      "end_ms": 34100,
+      "text": "Thank you Mr Morgan. When did the accident happen?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 34550,
+      "end_ms": 39230,
+      "text": "Yesterday, the thirteenth, at around five forty in the evening. So 5:40 pm."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 39680,
+      "end_ms": 40760,
+      "text": "And where exactly?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 41210,
+      "end_ms": 47330,
+      "text": "At the roundabout where Avenue Jean Jaurès meets Rue de Gerland, in the seventh arrondissement of Lyon."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 47780,
+      "end_ms": 49940,
+      "text": "What's the registration of your vehicle?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 50390,
+      "end_ms": 52550,
+      "text": "GE-418-TR. It's a grey Peugeot 308."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 53000,
+      "end_ms": 54800,
+      "text": "Can you describe the damage?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 55250,
+      "end_ms": 61370,
+      "text": "The rear bumper is crushed, the boot lid is dented and the right tail light is broken."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 61820,
+      "end_ms": 62900,
+      "text": "Was anybody injured?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 63350,
+      "end_ms": 66590,
+      "text": "No, nobody was hurt, thankfully. Just a bit shaken."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 67040,
+      "end_ms": 69200,
+      "text": "Good. Was there another vehicle involved?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 69650,
+      "end_ms": 75410,
+      "text": "Yes, the other driver is Marc Lefèvre. His plate is DT-775-PA and he's insured with MAIF."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 75860,
+      "end_ms": 77300,
+      "text": "Did the police attend?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 77750,
+      "end_ms": 84230,
+      "text": "Yes, a patrol came by and they gave me a report number, P V dash 2026 dash 091344."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 84680,
+      "end_ms": 86840,
+      "text": "So PV-2026-091344. Were there any witnesses?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 87290,
+      "end_ms": 92330,
+      "text": "One, a lady called Julie Martin. Her number is 06 87 45 12 36."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 92780,
+      "end_ms": 96740,
+      "text": "Perfect. And what's the best number to call you back on?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 97190,
+      "end_ms": 99710,
+      "text": "My mobile, 06 12 45 78 90."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 100160,
+      "end_ms": 106280,
+      "text": "Thank you Mr Morgan, I've opened the claim and an expert will contact you within 48 hours."
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 106730,
+      "end_ms": 108890,
+      "text": "Great, thanks for your help. Goodbye."
+    }
+  ]
+}

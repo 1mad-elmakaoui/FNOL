@@ -1,0 +1,147 @@
+{
+  "id": "missing_policy",
+  "description": "Caller cannot give the policy number; hit-and-run, so third-party details are unknown.",
+  "language": "en",
+  "recorded_at": "2026-09-22T09:40:00+01:00",
+  "duration_s": 99.5,
+  "segments": [
+    {
+      "speaker": "agent",
+      "start_ms": 800,
+      "end_ms": 2960,
+      "text": "Good morning, Horizon Assurance, Nadia speaking."
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 3410,
+      "end_ms": 10250,
+      "text": "Hello, someone hit my car while it was parked and just drove off. I want to make a claim."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 10700,
+      "end_ms": 14300,
+      "text": "I'm sorry about that. Do you have your policy number?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 14750,
+      "end_ms": 23030,
+      "text": "I don't, it's on the papers in the glovebox and the car is at the garage. I really don't have it with me."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 23480,
+      "end_ms": 27080,
+      "text": "That's fine, we can add it later. What's your name?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 27530,
+      "end_ms": 28610,
+      "text": "Amina El Idrissi."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 29060,
+      "end_ms": 31220,
+      "text": "And the registration of the car?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 31670,
+      "end_ms": 32370,
+      "text": "48213-A-1."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 32820,
+      "end_ms": 34260,
+      "text": "When did it happen?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 34710,
+      "end_ms": 40470,
+      "text": "Last Saturday night, around eleven. I came back to the car and the door was smashed."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 40920,
+      "end_ms": 44880,
+      "text": "Saturday the nineteenth, around 11 pm. Where was the car parked?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 45330,
+      "end_ms": 50010,
+      "text": "In the car park of the Marjane supermarket in Hay Riad, in Rabat."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 50460,
+      "end_ms": 51540,
+      "text": "What's the damage?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 51990,
+      "end_ms": 57030,
+      "text": "The rear right door is dented and badly scratched, and the handle is broken."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 57480,
+      "end_ms": 60000,
+      "text": "Was anyone in the car? Anyone hurt?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 60450,
+      "end_ms": 63690,
+      "text": "No, nobody was in the car, nobody was hurt."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 64140,
+      "end_ms": 67740,
+      "text": "Do you know anything about the vehicle that hit you?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 68190,
+      "end_ms": 75030,
+      "text": "No, nothing. A guard said the plate maybe started with 12, but he wasn't sure. They just drove away."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 75480,
+      "end_ms": 78000,
+      "text": "Did you report it to the police?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 78450,
+      "end_ms": 84930,
+      "text": "Yes, I went to the police station this morning. They gave me a receipt with the number 2026/RB/7781."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 85380,
+      "end_ms": 88980,
+      "text": "2026/RB/7781, noted. What number should we call you back on?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 89430,
+      "end_ms": 93030,
+      "text": "My number is plus 212 6 62 48 19 07."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 93480,
+      "end_ms": 98520,
+      "text": "Thank you Mrs El Idrissi. Please send us the policy number when you can."
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "id": "self_correction",
+  "description": "Caller corrects the plate, the time and the callback number; the later value must win.",
+  "language": "en",
+  "recorded_at": "2026-09-21T10:30:00+01:00",
+  "duration_s": 100.4,
+  "segments": [
+    {
+      "speaker": "agent",
+      "start_ms": 800,
+      "end_ms": 4760,
+      "text": "Horizon Assurance, good morning, this is Karim. How can I help?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 5210,
+      "end_ms": 10250,
+      "text": "Hello, I had an accident yesterday in Casablanca and I need to declare it."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 10700,
+      "end_ms": 12860,
+      "text": "Of course. Your policy number please?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 13310,
+      "end_ms": 14010,
+      "text": "FNX-377102."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 14460,
+      "end_ms": 16620,
+      "text": "Thank you. And your full name?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 17070,
+      "end_ms": 17790,
+      "text": "Sarah Benali."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 18240,
+      "end_ms": 22200,
+      "text": "Thank you Mrs Benali. What is the registration of your car?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 22650,
+      "end_ms": 26250,
+      "text": "The plate is 1234-A-56, no sorry, 1234-B-56. B like Beirut."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 26700,
+      "end_ms": 28860,
+      "text": "1234-B-56, noted. When did it happen?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 29310,
+      "end_ms": 37590,
+      "text": "Yesterday afternoon, around three pm... actually no, it was closer to half past four, I had just picked up my son from school."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 38040,
+      "end_ms": 42000,
+      "text": "So yesterday, the twentieth, at about four thirty. Where was it?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 42450,
+      "end_ms": 44970,
+      "text": "On Boulevard Zerktouni, near the Twin Center."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 45420,
+      "end_ms": 47940,
+      "text": "What damage is there on your car?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 48390,
+      "end_ms": 53070,
+      "text": "The front left wing is pushed in and the left headlight is smashed."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 53520,
+      "end_ms": 54600,
+      "text": "Was anyone injured?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 55050,
+      "end_ms": 62610,
+      "text": "My son has a small cut on his forehead. We went to the clinic, he got two stitches, he's fine now."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 63060,
+      "end_ms": 65940,
+      "text": "I'm glad he's okay. Was another vehicle involved?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 66390,
+      "end_ms": 73230,
+      "text": "Yes, a taxi. The driver is Hassan Ouazzani, the taxi plate is 56789-A-6 and he's insured with Wafa Assurance."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 73680,
+      "end_ms": 75120,
+      "text": "Did the police come?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 75570,
+      "end_ms": 80610,
+      "text": "Yes, they came and gave us a report, the number is 0457 slash 2026."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 81060,
+      "end_ms": 82140,
+      "text": "0457/2026. Any witnesses?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 82590,
+      "end_ms": 85110,
+      "text": "No, no witnesses, everyone just drove past."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 85560,
+      "end_ms": 88080,
+      "text": "And a phone number to reach you?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 88530,
+      "end_ms": 94650,
+      "text": "06 61 23 45 67. Wait, no, sorry, it ends in 76. 06 61 23 45 76."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 95100,
+      "end_ms": 99420,
+      "text": "06 61 23 45 76. Thank you, we'll call you back shortly."
+    }
+  ]
+}

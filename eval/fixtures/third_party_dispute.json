@@ -1,0 +1,171 @@
+{
+  "id": "third_party_dispute",
+  "description": "Liability is disputed; other driver refuses to share insurer; two witnesses.",
+  "language": "en",
+  "recorded_at": "2026-09-16T14:20:00+01:00",
+  "duration_s": 106.0,
+  "segments": [
+    {
+      "speaker": "agent",
+      "start_ms": 800,
+      "end_ms": 4040,
+      "text": "Horizon Assurance claims, Leila speaking, how can I help?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 4490,
+      "end_ms": 11330,
+      "text": "Hello. I'm calling about an accident on Monday. The other driver says it was my fault, and it wasn't."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 11780,
+      "end_ms": 15020,
+      "text": "I understand. Let's take the details. Your policy number?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 15470,
+      "end_ms": 17630,
+      "text": "FNX-902341. My name is Youssef Amrani."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 18080,
+      "end_ms": 21320,
+      "text": "Thank you Mr Amrani. When did the accident happen?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 21770,
+      "end_ms": 27170,
+      "text": "Monday the fourteenth, around ten to eight in the morning, on my way to work."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 27620,
+      "end_ms": 28340,
+      "text": "And where?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 28790,
+      "end_ms": 33470,
+      "text": "At the intersection of Avenue Mohammed VI and Rue de Fès, in Tangier."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 33920,
+      "end_ms": 35000,
+      "text": "Your vehicle's registration?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 35450,
+      "end_ms": 36890,
+      "text": "7731-D-6, the Hyundai Tucson."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 37340,
+      "end_ms": 38420,
+      "text": "What happened exactly?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 38870,
+      "end_ms": 47870,
+      "text": "My light was green. She came from Rue de Fès and hit the front of my car. Now she says I ran the red light."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 48320,
+      "end_ms": 50480,
+      "text": "What damage does your car have?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 50930,
+      "end_ms": 55610,
+      "text": "The front bumper and the bonnet are damaged and the radiator is leaking."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 56060,
+      "end_ms": 56780,
+      "text": "Anybody injured?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 57230,
+      "end_ms": 59030,
+      "text": "No, no one was hurt."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 59480,
+      "end_ms": 61640,
+      "text": "What are the other driver's details?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 62090,
+      "end_ms": 68570,
+      "text": "Her name is Nadia Cherkaoui, her plate is 90412-B-40. But she refused to tell me her insurance company."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 69020,
+      "end_ms": 71180,
+      "text": "So you don't know her insurer."
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 71630,
+      "end_ms": 74510,
+      "text": "No. She refused to sign the constat too."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 74960,
+      "end_ms": 76400,
+      "text": "Did the police come?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 76850,
+      "end_ms": 80450,
+      "text": "No, no police came. Maybe I should have called them."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 80900,
+      "end_ms": 81980,
+      "text": "Were there witnesses?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 82430,
+      "end_ms": 93950,
+      "text": "Yes, two. A man from the café on the corner, Omar Tazi, his number is 06 70 11 22 33. And a woman, Fatima Zahra Bennani, but I don't have her number."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 94400,
+      "end_ms": 98360,
+      "text": "That helps a lot. What number can we reach you on?"
+    },
+    {
+      "speaker": "caller",
+      "start_ms": 98810,
+      "end_ms": 100250,
+      "text": "0655 98 43 21."
+    },
+    {
+      "speaker": "agent",
+      "start_ms": 100700,
+      "end_ms": 105020,
+      "text": "Thank you, a claims handler will review the liability question with you."
+    }
+  ]
+}

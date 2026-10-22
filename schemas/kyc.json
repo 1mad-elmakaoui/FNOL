@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "kyc",
+  "title": "Know Your Customer — onboarding call",
+  "description": "Identity and address details collected on an onboarding call. Demonstrates that the agent is schema-agnostic: drop a file in schemas/ and request it by name.",
+  "type": "object",
+  "additionalProperties": false,
+  "x-display-name-field": "full_name",
+  "x-pii-allow": ["email"],
+  "required": ["full_name", "date_of_birth", "address", "phone", "id_document_type"],
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Customer's full legal name.",
+      "x-label": {"en": "Full name", "fr": "Nom complet", "ar": "الاسم الكامل"},
+      "x-question": {"en": "Could you spell your full legal name?", "fr": "Pourriez-vous épeler votre nom complet ?", "ar": "هل يمكنك تهجئة اسمك الكامل؟"}
+    },
+    "date_of_birth": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of birth, ISO 8601 (YYYY-MM-DD).",
+      "x-validators": ["not_in_future"],
+      "x-label": {"en": "Date of birth", "fr": "Date de naissance", "ar": "تاريخ الميلاد"},
+      "x-question": {"en": "What is your date of birth?", "fr": "Quelle est votre date de naissance ?", "ar": "ما هو تاريخ ميلادك؟"}
+    },
+    "address": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["street", "city", "country"],
+      "properties": {
+        "street": {
+          "type": "string",
+          "description": "Street address.",
+          "x-label": {"en": "Street", "fr": "Rue", "ar": "الشارع"},
+          "x-question": {"en": "What is your street address?", "fr": "Quelle est votre adresse ?", "ar": "ما هو عنوانك؟"}
+        },
+        "postal_code": {
+          "type": "string",
+          "pattern": "^[0-9]{5}$",
+          "description": "Postal code (5 digits in FR and MA).",
+          "x-label": {"en": "Postal code", "fr": "Code postal", "ar": "الرمز البريدي"},
+          "x-question": {"en": "What is your postal code?", "fr": "Quel est votre code postal ?", "ar": "ما هو رمزك البريدي؟"}
+        },
+        "city": {
+          "type": "string",
+          "description": "City.",
+          "x-label": {"en": "City", "fr": "Ville", "ar": "المدينة"},
+          "x-question": {"en": "Which city do you live in?", "fr": "Dans quelle ville habitez-vous ?", "ar": "في أي مدينة تسكن؟"}
+        },
+        "country": {
+          "type": "string",
+          "enum": ["FR", "MA", "BE", "ES", "OTHER"],
+          "description": "Country, ISO 3166 alpha-2 (FR, MA, BE, ES) or OTHER.",
+          "x-label": {"en": "Country", "fr": "Pays", "ar": "البلد"},
+          "x-question": {"en": "Which country is that address in?", "fr": "Dans quel pays se trouve cette adresse ?", "ar": "في أي بلد يقع هذا العنوان؟"}
+        }
+      }
+    },
+    "phone": {
+      "type": "string",
+      "format": "phone",
+      "description": "Contact phone number.",
+      "x-label": {"en": "Phone", "fr": "Téléphone", "ar": "الهاتف"},
+      "x-question": {"en": "What phone number can we reach you on?", "fr": "À quel numéro pouvons-nous vous joindre ?", "ar": "ما هو رقم هاتفك؟"}
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact e-mail address.",
+      "x-label": {"en": "E-mail", "fr": "E-mail", "ar": "البريد الإلكتروني"},
+      "x-question": {"en": "Could you give me an e-mail address?", "fr": "Pourriez-vous me donner une adresse e-mail ?", "ar": "هل يمكنك إعطائي عنوان بريد إلكتروني؟"}
+    },
+    "id_document_type": {
+      "type": "string",
+      "enum": ["passport", "national_id", "residence_permit", "driving_licence"],
+      "description": "Type of identity document the customer will provide.",
+      "x-label": {"en": "ID document", "fr": "Pièce d'identité", "ar": "وثيقة الهوية"},
+      "x-question": {"en": "Which identity document will you use?", "fr": "Quelle pièce d'identité allez-vous fournir ?", "ar": "ما هي وثيقة الهوية التي ستستخدمها؟"}
+    },
+    "occupation": {
+      "type": "string",
+      "description": "Occupation.",
+      "x-label": {"en": "Occupation", "fr": "Profession", "ar": "المهنة"},
+      "x-question": {"en": "What is your occupation?", "fr": "Quelle est votre profession ?", "ar": "ما هي مهنتك؟"}
+    }
+  }
+}
